@@ -6,10 +6,10 @@ imHere.config(function($stateProvider, $urlRouterProvider) {
     templateUrl: "partials/welcome.html"
   });
 
-  $staeProvider.state('signin', {
-    url:'/signins',
-    templateUrl: "partials/signin.html",
-    controller: "SigninsCtrl"
+  $stateProvider.state('students', {
+    url:'/students',
+    templateUrl: "partials/students.html",
+    controller: "StudentsCtrl"
   });
 
 });
