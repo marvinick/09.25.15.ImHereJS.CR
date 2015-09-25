@@ -1,0 +1,20 @@
+<div class="row" ng-controller="AttendancesCtrl">
+  <div class="col-md-6" ng-show="studentsUnsignedIns.length">
+    <h3>Students (not present)</h3>
+    <ul>
+      <li ng-repeat="item in studentsUnsignedIns = ( students | filter:{signIn: false})">
+        {{item.name}} <a ng-click="signStudentIn(item)"> - Sign In - </a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-6" ng-show="studentsSignedIns.length">
+    <h3>Students (present)</h3>
+    <ul>
+      <li ng-repeat="item in studentsSignedIns = ( students | filter:{signIn: true})">
+        {{ item.name}}
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div ui-view></div>

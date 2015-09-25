@@ -12,4 +12,10 @@ imHere.config(function($stateProvider, $urlRouterProvider) {
     controller: "StudentsCtrl"
   });
 
+  $stateProvider.state('attendances', {
+    url:'/attendances',
+    templateUrl: "partials/attendances.html",
+    controller: "AttendancesCtrl"
+  });
+
 });
