@@ -18,4 +18,10 @@ imHere.config(function($stateProvider, $urlRouterProvider) {
     controller: "AttendancesCtrl"
   });
 
+  $stateProvider.state('whoishere', {
+    url:'/whoishere',
+    templateUrl: "partials/whoishere.html",
+    controller: "AttendancesCtrl"
+  });
+
 });
