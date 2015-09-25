@@ -6,7 +6,7 @@
       placeholder="search students">
     </div>
   </form>
-  <h4><a ui-sref="welcome">Home</h4>
+
 
   <div class="col-md-6">
     <center>
@@ -15,7 +15,7 @@
 
     <ul>
       <li style="list-style-type: none;" ng-repeat="item in filtered = (students | filter:query)">
-        <div class="box">
+        <div class="box2">
           <h4>{{ item.name }}</h4>
         </div>
       </li>
@@ -31,13 +31,13 @@
         <input type="text" ng-model="StudentsFactory.studentName" class="form-control" placeholder="add student name here">
       </div>
       <hr>
-      <div class="form-group">
+
         <button type="submit" class="btn btn-info btn-lg">Submit</button>
-      </div>
+
     </form>
   </div>
 </div>
-<br>
-<div class="col-md-12">
-</div>
+
 <div ui-view></div>
+<hr>
+<h4 class="text-center"><a ui-sref="welcome">Home</h4>
