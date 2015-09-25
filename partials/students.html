@@ -10,8 +10,13 @@
       <h1 ng-show='students.length && filtered.length'>Students</h1>
       <h1 ng-show="students.length && !filtered.length">No students with that name</h1>
     </div>
+    <ul>
+      <li ng-repeat="item in filtered = (students | filter:query)">
+        {{ item.name }}
+      </li>
+    </ul>
 
-    <h3>Sign In</h3>
+    <h3>Add Student</h3>
     <form ng-submit="StudentsFactory.addStudent()" class="form-inline" role="form">
       <div class="form-group">
         <input type="text" ng-model="StudentsFactory.studentName" class="form-control" placeholder="add student name here">
