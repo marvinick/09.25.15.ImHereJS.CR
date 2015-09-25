@@ -5,4 +5,11 @@ imHere.config(function($stateProvider, $urlRouterProvider) {
     url:'',
     templateUrl: "partials/welcome.html"
   });
+
+  $staeProvider.state('signin', {
+    url:'/signins',
+    templateUrl: "partials/signin.html",
+    controller: "SigninsCtrl"
+  });
+
 });
