@@ -7,5 +7,9 @@ imHere.controller('AttendancesCtrl', ['$scope', 'StudentsFactory',function Atten
     student.signIn = true;
   };
 
+  $scope.signStudentOut = function(student) {
+    student.signIn = false;
+  };
+
 }]);
 
