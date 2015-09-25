@@ -1,3 +1,4 @@
+<br>
 <div ng-controller="StudentsCtrl">
   <form class="form-inline" role="form">
     <div class="form-group" ng-show="students.length">
@@ -5,25 +6,38 @@
       placeholder="search students">
     </div>
   </form>
+  <h4><a ui-sref="welcome">Home</h4>
 
-    <div class="page-header">
+  <div class="col-md-6">
+    <center>
       <h1 ng-show='students.length && filtered.length'>Students</h1>
       <h1 ng-show="students.length && !filtered.length">No students with that name</h1>
-    </div>
+
     <ul>
-      <li ng-repeat="item in filtered = (students | filter:query)">
-        {{ item.name }}
+      <li style="list-style-type: none;" ng-repeat="item in filtered = (students | filter:query)">
+        <div class="box">
+          <h4>{{ item.name }}</h4>
+        </div>
       </li>
     </ul>
+  </center>
+  </div>
 
-    <h3>Add Student</h3>
+  <div class="col-md-6">
+  <br>
+  <h3>Add Student</h3>
     <form ng-submit="StudentsFactory.addStudent()" class="form-inline" role="form">
       <div class="form-group">
         <input type="text" ng-model="StudentsFactory.studentName" class="form-control" placeholder="add student name here">
       </div>
-      <button type="submit" class="btn btn-info">Submit</button>
+      <hr>
+      <div class="form-group">
+        <button type="submit" class="btn btn-info btn-lg">Submit</button>
+      </div>
     </form>
-
+  </div>
 </div>
-<h3><a ui-sref="welcome">Home</h3>
+<br>
+<div class="col-md-12">
+</div>
 <div ui-view></div>

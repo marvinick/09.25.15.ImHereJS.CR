@@ -1,20 +1,30 @@
+<br>
 <div class="row" ng-controller="AttendancesCtrl">
   <div class="col-md-6" ng-show="studentsUnsignedIns.length">
-    <h3>Students (not present)</h3>
-    <ul>
-      <li ng-repeat="item in studentsUnsignedIns = ( students | filter:{signIn: false})">
-        {{item.name}} <a ng-click="signStudentIn(item)"> - Sign In - </a>
-      </li>
-    </ul>
+    <center>
+      <h3 class="text-center">Students (not present)</h3>
+      <ul>
+        <li style="list-style-type: none;" ng-repeat="item in studentsUnsignedIns = ( students | filter:{signIn: false})">
+          <div class="box3">
+            <h4>{{item.name}} <a ng-click="signStudentIn(item)">In</a></h4>
+          </div>
+        </li>
+      </ul>
+    </center>
   </div>
   <div class="col-md-6" ng-show="studentsSignedIns.length">
-    <h3>Students (present)</h3>
-    <ul>
-      <li ng-repeat="item in studentsSignedIns = ( students | filter:{signIn: true})">
-        {{ item.name}} <a ng-click="signStudentOut(item)"> - Sign Out - </a>
-      </li>
-    </ul>
+    <center>
+      <h3 class="text-center">Students (present)</h3>
+      <ul>
+        <li style="list-style-type: none;" ng-repeat="item in studentsSignedIns = ( students | filter:{signIn: true})">
+          <div class="box">
+            <h4>{{ item.name}} <a ng-click="signStudentOut(item)">Out</a></h4>
+          </div>
+        </li>
+      </ul>
+    </center>
   </div>
 </div>
-<h3><a ui-sref="welcome">Home</h3>
+<hr>
+<h4 class="text-center"><a ui-sref="welcome">Home</h4>
 <div ui-view></div>
