@@ -9,6 +9,12 @@ This app allows students to sign in and teachers to monitor the attendance
 
 AngularJS, Html, CSS, Bootstrap
 
+##Setup 
+
+clone repository : github.com/marvinick/09.25.15.ImHereJS.CR
+
+run $python -m SimpleHTTPServer
+
 ###Legal
 
 Copyright (c) 2015 {Marvin Nikijuluw}
